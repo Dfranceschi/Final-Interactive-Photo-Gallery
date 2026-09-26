@@ -31,7 +31,7 @@ document.getElementById('image').innerHTML = "Hover over an image below to displ
   function loadFlowers(){
     document.getElementById("flowers").innerHTML = flowers;
 }
-function.myFunction(){
+function myFunction(){
   var flowers = prompt("What is your favorite flower!");
   flowers[flowers.length] = flowers;
   document.getElementById("flowers").innerHTML = flowers;
