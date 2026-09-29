@@ -27,12 +27,23 @@ document.getElementById('image').innerHTML = "Hover over an image below to displ
     back to the original text.  You can use the html code to see what that original text was
     */
 		
-	var flowers = [Lillies,Tulips,Orchids,Sunflowers,];
+	var flowers = ["Lillies","Tulips","Orchids","Sunflowers"];
   function loadFlowers(){
     document.getElementById("flowers").innerHTML = flowers;
 }
 function myFunction(){
-  var flowers = prompt("What is your favorite flower!");
-  flowers[flowers.length] = flowers;
+  var flower = prompt("What is your favorite flowers! ");
+  flowers[flowers.length] = flower;
   document.getElementById("flowers").innerHTML = flowers;
+}
+
+function message(msg){
+  document.getElementById("output").innerHTML = msg + "event";  
+}
+function pickImages(){
+  options = ["picsresized2/yellowcactusflower4.jpeg", "picsresized2/redleavesinabowl3.jpeg", "picsresized2/yellowlemon5.jpeg", "picsresized2/whitelily.jpg", "picsresized2/pinkflowers2.jpeg", "picsresized2/puertoricanflags6.jpeg"];
+  randomImg = "images/" + options[Math.random() * options.length)];
+  img = document.querySelector("#header_img");
+  img.setAttribute("src", randomImg);
+  img.setAttribute("alt","");
 }
