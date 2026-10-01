@@ -36,14 +36,10 @@ function myFunction(){
   flowers[flowers.length] = flower;
   document.getElementById("flowers").innerHTML = flowers;
 }
+function addBlurEffect(){
+  document.querySelectorAll('img').forEach((image) => {
+    image.addEventListener('mouseover', () => image.classList.add('blur'));
+    image.addEventListener('mouseout', () => image.classList.remove('blur'));
+  });
+}
 
-function message(msg){
-  document.getElementById("output").innerHTML = msg + "event";  
-}
-function pickImages(){
-  options = ["picsresized2/yellowcactusflower4.jpeg", "picsresized2/redleavesinabowl3.jpeg", "picsresized2/yellowlemon5.jpeg", "picsresized2/whitelily.jpg", "picsresized2/pinkflowers2.jpeg", "picsresized2/puertoricanflags6.jpeg"];
-  randomImg = "images/" + options[Math.random() * options.length)];
-  img = document.querySelector("#header_img");
-  img.setAttribute("src", randomImg);
-  img.setAttribute("alt","");
-}

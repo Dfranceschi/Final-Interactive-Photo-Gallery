@@ -25,8 +25,9 @@ body{
     border: 10px solid black;
 }
 img{
-		width:95%;
-  
+	width:25%;
+    border: 10px solid black;
+    
 }
 h1{
     text-align: center;
@@ -35,4 +36,7 @@ h1{
 h2{
     text-align: center;
     color:#502f4c;
+}
+.blur {
+    filter: blur(2px);
 }
