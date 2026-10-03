@@ -18,8 +18,9 @@
 			 document.getElementById("my-refresh-image").src = images[randomIndex];
         }
     </script>
-        
     
+	<link href="lightbox/lightbox.css" rel="stylesheet" />
+
 	<link rel="stylesheet" href="css/style.css">
 	<style>
 		#img:hover {
@@ -35,6 +36,18 @@
 	<h2>Check out our beautiful photo collection below!</h2>
 	 <!-- 5. Ensure the ID here matches your document.getElementById selector -->
     <img id="my-refresh-image" src="picsresized2/cactusflowers1.JPG" alt="Randomized Gallery" width="50">
+	
+	<a class="example-image-link" href="picsresized2/cactusflowers1.JPG" data-lightbox="gallery" data-alt="Cactus with flowers"></a>
+	
+
+	
+	<a href="picsresized2/cactusflowers1.jpeg" data-lightbox="gallery" data-alt="Cactus with flowers">Image #1</a>
+	<a href="picsresized2/yellowcactusflower4.jpeg" data-lightbox="gallery" data-alt="Cactus with yellow flowers">Image #2</a>
+	<a href="picsresized2/redleavesinabowl3.jpeg" data-lightbox="gallery" data-alt="Red leaves in a bowl full of water">Image #3</a>
+	<a href="picsresized2/yellowlemon5.jpeg" data-lightbox="gallery" data-alt="Yellow lemon">Image #4</a>
+	<a href="picsresized2/whitelily.jpg" data-lightbox="gallery" data-alt="White lily">Image #5</a>
+	<a href="picsresized2/pinkflowers2.jpeg" data-lightbox="gallery" data-alt="Pink flowers">Image #6</a>
+	<a href="picsresized2/puertoricanflags6.jpeg" data-lightbox="gallery" data-alt="Puerto Rican flags surrounded by flowers">Image #7</a>
 	
 	<img id='img' align="right" src="picsresized2/pinkflowers2.jpeg" alt="Sample Image">
 </header>
@@ -63,7 +76,7 @@
 
 	<img class = "preview" tabindex="7" alt = "Puerto Rican flags surrounded by flowers" src = "picsresized2/puertoricanflags6.jpeg" onmouseover = "upDate(this)" onmouseout = "unDo()">
 	
-
+<script src="lightbox/lightbox.js"></script>
 
 </body>
 </body>
