@@ -27,9 +27,10 @@ document.getElementById('image').innerHTML = "Hover over an image below to displ
     back to the original text.  You can use the html code to see what that original text was
     */
 		
-	var flowers = ["Lillies","Tulips","Orchids","Sunflowers"];
-  function loadFlowers(){
-    document.getElementById("flowers").innerHTML = flowers;
+	var flowers = [""];
+
+function loadFlowers() {
+  document.getElementById("flowers").textContent = flowers.join(", ");
 }
 function myFunction(){
   var flower = prompt("What is your favorite flowers! ");
@@ -43,3 +44,22 @@ function addBlurEffect(){
   });
 }
 
+function setImages() {
+  const options = [
+    "picsresized2/cactusflowers1.JPG",
+    "picsresized2/pinkflowers2.jpeg",
+    "picsresized2/puertoricanflags6.jpeg",
+    "picsresized2/redleavesinabowl3.jpeg",
+    "picsresized2/whitelily.jpg",
+    "picsresized2/yellowcactusflower4.jpeg",
+    "picsresized2/yellowlemon5.jpeg"
+  ];
+
+  const currentImages = document.querySelectorAll(".flex img");
+
+  currentImages.forEach((img) => {
+    const randomImg = options[Math.floor(Math.random() * options.length)];
+    img.src = randomImg;
+    img.setAttribute("tabindex", "0");
+  });
+}

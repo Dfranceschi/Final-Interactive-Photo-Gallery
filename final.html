@@ -3,6 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Photo Gallery</title>
+
+
+<body onload="setImages()">
 	<script>
         function pickimages() {
 			 const images = [
@@ -27,7 +30,7 @@
 			filter: blur(4px);
 		}
 	</style>
-	<script src = "js/function.js"></script>
+	
 </head>
 <!-- 4. Trigger the function when the page fully loads -->
 <body onload="pickimages()">
@@ -35,57 +38,51 @@
 	<h1>Interactive Photo Gallery</h1>
 	<h2>Check out our beautiful photo collection below!</h2>
 	 <!-- 5. Ensure the ID here matches your document.getElementById selector -->
-    <img id="my-refresh-image" src="picsresized2/cactusflowers1.JPG" alt="Randomized Gallery" width="50">
+    
 	
-	<a class="example-image-link" href="picsresized2/cactusflowers1.JPG" data-lightbox="gallery" data-alt="Cactus with flowers"></a>
-	
-
-	
-	<a href="picsresized2/cactusflowers1.JPG" data-lightbox="gallery" data-alt="Cactus with flowers">Image #1</a>
-	<img src="picsresized2/cactusflowers1.JPG" alt="Cactus with flowers" width="50"></a>
-	<a href="picsresized2/yellowcactusflower4.jpeg" data-lightbox="gallery" data-alt="Cactus with yellow flowers">Image #2</a>
-	<img src="picsresized2/yellowcactusflower4.jpeg" alt="Cactus with yellow flowers" width="50"></a>
-	<a href="picsresized2/redleavesinabowl3.jpeg" data-lightbox="gallery" data-alt="Red leaves in a bowl full of water">Image #3</a>
-	<img src="picsresized2/redleavesinabowl3.jpeg" alt="Red leaves in a bowl full of water" width="50"></a>
-	<a href="picsresized2/yellowlemon5.jpeg" data-lightbox="gallery" data-alt="Yellow lemon">Image #4</a>
-	<img src="picsresized2/yellowlemon5.jpeg" alt="Yellow lemon" width="50"></a>
-	<a href="picsresized2/whitelily.jpg" data-lightbox="gallery" data-alt="White lily">Image #5</a>
-	<img src="picsresized2/whitelily.jpg" alt="White lily" width="50"></a>
-	<a href="picsresized2/pinkflowers2.jpeg" data-lightbox="gallery" data-alt="Pink flowers">Image #6</a>
-	<img src="picsresized2/pinkflowers2.jpeg" alt="Pink flowers" width="50"></a>
-	<a href="picsresized2/puertoricanflags6.jpeg" data-lightbox="gallery" data-alt="Puerto Rican flags surrounded by flowers">Image #7</a>
-	<img src="picsresized2/puertoricanflags6.jpeg" alt="Puerto Rican flags surrounded by flowers" width="50"></a>
-	
-	<img id='img' align="right" src="picsresized2/pinkflowers2.jpeg" alt="Sample Image">
 </header>
+
+<main id= "main">
+<div class="flex">
+	<img src="picsresized2/pinkflowers2.jpeg" alt="Pink flowers" width="40">
+	<img src="picsresized2/puertoricanflags6.jpeg" alt="Puerto Rican flags surrounded by flowers" width="40">
+	<img src="picsresized2/yellowcactusflower4.jpeg" alt="Cactus with yellow flowers" width="40"> 
+</div>
+</main>
+
+<img id="photo" src="picsresized2/" alt="A description">
+
 <body>
 	
-	<div id="image" tabindex="8">
+	<div id="image" alt="square box">
 		Hover over an image below to display here.
 	</div>
 	
-		<body onload= "loadFlowers()">
-			<button onclick = "myFunction(); message('CLICK')"> What is your favorite flowers?</button>
-			<p id="flowers"></p>
+		<body onload="loadFlowers()">
+  <button onclick="myFunction(); message('CLICK')">
+    What are your favorite flowers?
+  </button>
+  <p id="flowers"></p>
+
 		</body>
 		  
 
-	<img class="preview" tabindex="2" alt = "Cactus with yellow flowers" src = "picsresized2/yellowcactusflower4.jpeg" onmouseover = "upDate(this)" onmouseout = "unDo()">
+	<img class="preview" alt="Cactus with yellow flowers" src="picsresized2/yellowcactusflower4.jpeg" onmouseover = "upDate(this)" onmouseout = "unDo()">
 	
-	<img class = "preview" tabindex="3" alt = "Red leaves in a bowl full of water" src = "picsresized2/redleavesinabowl3.jpeg" onmouseover = "upDate(this)" onmouseout = "unDo()">
+	<img class = "preview" alt="Red leaves in a bowl full of water" src="picsresized2/redleavesinabowl3.jpeg" onmouseover = "upDate(this)" onmouseout = "unDo()">
 	
-	<img class = "preview" tabindex="4" alt = "Yellow lemon" src = "picsresized2/yellowlemon5.jpeg" onmouseover = "upDate(this)" onmouseout = "unDo()">
+	<img class = "preview" alt="Yellow lemon" src="picsresized2/yellowlemon5.jpeg" onmouseover = "upDate(this)" onmouseout = "unDo()">
 
-	<img class = "preview" tabindex="5" alt = "White lily" src = "picsresized2/whitelily.jpg" onmouseover = "upDate(this)" onmouseout = "unDo()">
+	<img class = "preview" alt="White lily" src="picsresized2/whitelily.jpg" onmouseover = "upDate(this)" onmouseout = "unDo()">
 
-	<img class = "preview" tabindex="6" alt = "Pink flowers" src = "picsresized2/pinkflowers2.jpeg" onmouseover = "upDate(this)" onmouseout = "unDo()">
+	<img class = "preview" alt="Pink flowers" src="picsresized2/pinkflowers2.jpeg" onmouseover = "upDate(this)" onmouseout = "unDo()">
 
+	<img class = "preview" alt="Puerto Rican flags surrounded by flowers" src="picsresized2/puertoricanflags6.jpeg" onmouseover = "upDate(this)" onmouseout = "unDo()">
 
-	<img class = "preview" tabindex="7" alt = "Puerto Rican flags surrounded by flowers" src = "picsresized2/puertoricanflags6.jpeg" onmouseover = "upDate(this)" onmouseout = "unDo()">
-<!-- <script src = lightbox/lightbox-plus-jquery.js></script> -->
+	<!-- <script src = lightbox/lightbox-plus-jquery.js></script> -->
 <script src="lightbox/lightbox-plus-jquery.js"></script>
-
+<script src = "js/function.js"></script>
 </body>
 </body>
-
+	</body>
 </html>
