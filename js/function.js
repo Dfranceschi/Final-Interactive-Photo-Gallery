@@ -1,6 +1,7 @@
 /*Name this external file gallery.js*/
 
 function upDate(previewPic){
+  console.log("Mouse over the image");
 const imageDiv = document.getElementById("image");imageDiv.style.backgroundImage = `url('${previewPic.src}')`;
 imageDiv.textContent = previewPic.alt;
   
@@ -16,6 +17,7 @@ imageDiv.textContent = previewPic.alt;
 	
 
 	function unDo(){
+    console.log("Mouse out of the image");
   document.getElementById('image').style.backgroundImage = "url('')";
 document.getElementById('image').innerHTML = "Hover over an image below to display here.";
 }
@@ -30,19 +32,16 @@ document.getElementById('image').innerHTML = "Hover over an image below to displ
 	var flowers = [""];
 
 function loadFlowers() {
+  console.log("Loading flowers");
   document.getElementById("flowers").textContent = flowers.join(", ");
 }
 function myFunction(){
+  console.log("Button clicked");
   var flower = prompt("What is your favorite flowers! ");
   flowers[flowers.length] = flower;
   document.getElementById("flowers").innerHTML = flowers;
 }
-function addBlurEffect(){
-  document.querySelectorAll('img').forEach((image) => {
-    image.addEventListener('mouseover', () => image.classList.add('blur'));
-    image.addEventListener('mouseout', () => image.classList.remove('blur'));
-  });
-}
+
 
 function setImages() {
   const options = [
@@ -56,10 +55,19 @@ function setImages() {
   ];
 
   const currentImages = document.querySelectorAll(".flex img");
-
   currentImages.forEach((img) => {
+    console.log("Image" + isSecureContext)
     const randomImg = options[Math.floor(Math.random() * options.length)];
     img.src = randomImg;
     img.setAttribute("tabindex", "0");
   });
 }
+const photo = document.getElementById("photo");
+photo.addEventListener("mouseenter", () => {
+  console.log("Mouse entered the photo");
+    photo.style.filter = "blur(5px)";
+  });
+ photo.addEventListener("mouseleave", () => {
+  console.log("Mouse left the photo");
+    photo.style.filter = "blur(0)";
+  });
